@@ -18,4 +18,9 @@ public class OrderServicelmpl implements OrderService{
     public List<Integer> getAll() {
         return cart.getItems();
     }
+
+    @Override
+    public List<Integer> storeAll() {
+        return null;
+    }
 }

@@ -18,6 +18,11 @@ public class OrderController {
         this.orderService = orderService;
 
     }
+    @GetMapping("/store")
+    public List<Integer> storeItems() {
+        return orderService.storeAll();
+    }
+
     @GetMapping("/add")
     public List<Integer> addItems(@RequestParam List<Integer> items) {
         return orderService.addAll(items);
@@ -26,6 +31,8 @@ public class OrderController {
     @GetMapping("/get")
     public List<Integer> getItems(){
         return orderService.getAll();
+
     }
+
 
 }
