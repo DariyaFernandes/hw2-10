@@ -10,7 +10,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/order")
+@RequestMapping("/storeOrder")
 
 public class OrderController {
     private final OrderService orderService;
@@ -18,10 +18,7 @@ public class OrderController {
         this.orderService = orderService;
 
     }
-    @GetMapping("/store")
-    public List<Integer> storeItems() {
-        return orderService.storeAll();
-    }
+
 
     @GetMapping("/add")
     public List<Integer> addItems(@RequestParam List<Integer> items) {
